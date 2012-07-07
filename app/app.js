@@ -24,7 +24,7 @@
     return console.error("No URL specified!");
   }
   destDir = path.join(process.env['HOME'], "ncURL_downloads");
-  if (!path.existsSync(destDir)) {
+  if (!fs.existsSync(destDir)) {
     fs.mkdirSync(destDir, 0755);
   }
   targetUrl = args[0];
